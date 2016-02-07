@@ -5,6 +5,11 @@ Companion App for [midimittr iOS App](https://itunes.apple.com/us/app/midimittr/
 
 midimittr USB is sending MIDI Data over USB to iOS Devices. It was built as a hack two years ago and was one of the first solutions to provide MIDI over USB back in the day.
 
+## Credits
+midimittr USB was built with:  
+[Peertalk](https://github.com/rsms/peertalk) for USB communication.  
+[Popup](https://github.com/shpakovski/Popup) for tray bar functionality.  
+[Sparkle Framework](https://sparkle-project.org) for auto-update functionality.  
 
 ## Screenshot
 
