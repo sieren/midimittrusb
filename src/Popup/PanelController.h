@@ -34,6 +34,7 @@
 @property (nonatomic, unsafe_unretained) IBOutlet NSButton *urlField;
 @property (nonatomic, strong) IBOutlet NSButton *preferencesButton;
 @property (nonatomic, strong) IBOutlet NSButton *iosAudioButton;
+@property (nonatomic, strong) IBOutlet NSButton *blueDeviceButton;
 @property (nonatomic, retain) IBOutlet NSView *devView;
 @property (nonatomic, retain) IBOutlet NSWindow *devWindow;
 @property (nonatomic, retain) IBOutlet NSWindowController *deviceWindow;
