@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6957F1671A7E347B00FB17CA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; };
+		696129211C67516900CA5E57 /* AudioDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696129201C67516900CA5E57 /* AudioDeviceController.m */; };
+		697F449D1C63D1B400711BCD /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697F449C1C63D1B400711BCD /* CoreAudioKit.framework */; };
+		697F449F1C63D65600711BCD /* Devices.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697F449E1C63D65600711BCD /* Devices.xib */; };
+		69AF00D01A7E35BF00B49EA0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69AF00D21A7E36AD00B49EA0 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00D11A7E36AD00B49EA0 /* Preferences.xib */; };
+		69AF00D91A7E371400B49EA0 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AF00D71A7E371400B49EA0 /* PreferenceController.m */; };
+		69AF00DC1A7E395E00B49EA0 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00DB1A7E395E00B49EA0 /* settings.png */; };
+		69AF00DE1A7E3BDD00B49EA0 /* setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00DD1A7E3BDD00B49EA0 /* setting@2x.png */; };
+		69AF00EA1A7E4D6100B49EA0 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00E91A7E4D6100B49EA0 /* dsa_pub.pem */; };
+		69AF00EC1A7E529E00B49EA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00EB1A7E529E00B49EA0 /* Images.xcassets */; };
+		69AF00F51A7E53B600B49EA0 /* icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00EF1A7E53B600B49EA0 /* icon16.png */; };
+		69AF00F61A7E53B600B49EA0 /* icon16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00F01A7E53B600B49EA0 /* icon16@2x.png */; };
+		69AF00F71A7E53B600B49EA0 /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00F11A7E53B600B49EA0 /* icon32.png */; };
+		69AF00F81A7E53B600B49EA0 /* icon32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00F21A7E53B600B49EA0 /* icon32@2x.png */; };
+		69AF00F91A7E53B600B49EA0 /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00F31A7E53B600B49EA0 /* icon128.png */; };
+		69AF00FA1A7E53B600B49EA0 /* icon128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00F41A7E53B600B49EA0 /* icon128@2x.png */; };
+		69AF00FE1A7E570800B49EA0 /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69AF00FD1A7E570800B49EA0 /* LaunchAtLoginController.m */; };
+		69AF01001A7E5B4D00B49EA0 /* ipadair.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00FF1A7E5B4D00B49EA0 /* ipadair.png */; };
+		69AF01021A7E5EF000B49EA0 /* iphoneic.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF01011A7E5EF000B49EA0 /* iphoneic.png */; };
+		69AF01041A7E5F1200B49EA0 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF01031A7E5F1200B49EA0 /* iphone.png */; };
+		69CC1F751A7BD2B90054097D /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F6F1A7BD2B90054097D /* PTChannel.m */; };
+		69CC1F761A7BD2B90054097D /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F721A7BD2B90054097D /* PTProtocol.m */; };
+		69CC1F771A7BD2B90054097D /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F741A7BD2B90054097D /* PTUSBHub.m */; };
+		69CC201F1A7BD3650054097D /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC201E1A7BD3650054097D /* CoreMIDI.framework */; };
+		69CC20221A7BD36A0054097D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC20201A7BD36A0054097D /* AudioToolbox.framework */; };
+		69CC20231A7BD36A0054097D /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC20211A7BD36A0054097D /* AudioUnit.framework */; };
+		69CC20251A7BD37E0054097D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC20241A7BD37E0054097D /* QuartzCore.framework */; };
+		69CC20281A7BDE040054097D /* USBMIDIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC20271A7BDE040054097D /* USBMIDIController.m */; };
+		69CC202B1A7BECCA0054097D /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC202A1A7BECCA0054097D /* NSAttributedString+Hyperlink.m */; };
+		DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4F7C0813C30F9F00825C6E /* Cocoa.framework */; };
+		DD4F7C1513C30F9F00825C6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1413C30F9F00825C6E /* main.m */; };
+		DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */; };
+		DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */; };
+		DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3713C317A500825C6E /* MenubarController.m */; };
+		DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3B13C3180800825C6E /* StatusItemView.m */; };
+		DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C3E13C318D600825C6E /* PanelController.m */; };
+		DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4013C31B4A00825C6E /* Panel.xib */; };
+		DD4F7C4413C31BD200825C6E /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C4313C31BD200825C6E /* Panel.m */; };
+		DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F7C4613C3208500825C6E /* BackgroundView.m */; };
+		DD4F7C4B13C322FA00825C6E /* Status.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4913C322FA00825C6E /* Status.png */; };
+		DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */; };
+		DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAB16C80A510044D141 /* Status@2x.png */; };
+		DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69AF00CF1A7E35AC00B49EA0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				69AF00D01A7E35BF00B49EA0 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6957F1661A7E347B00FB17CA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		6961291F1C67516900CA5E57 /* AudioDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceController.h; sourceTree = "<group>"; };
+		696129201C67516900CA5E57 /* AudioDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDeviceController.m; sourceTree = "<group>"; };
+		697F449C1C63D1B400711BCD /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		697F449E1C63D65600711BCD /* Devices.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Devices.xib; path = Popup/Devices.xib; sourceTree = "<group>"; };
+		69AF00D11A7E36AD00B49EA0 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = Popup/Preferences.xib; sourceTree = "<group>"; };
+		69AF00D61A7E371400B49EA0 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		69AF00D71A7E371400B49EA0 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		69AF00DB1A7E395E00B49EA0 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		69AF00DD1A7E3BDD00B49EA0 /* setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@2x.png"; sourceTree = "<group>"; };
+		69AF00E91A7E4D6100B49EA0 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		69AF00EB1A7E529E00B49EA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MIDI LE USB/Images.xcassets"; sourceTree = "<group>"; };
+		69AF00EF1A7E53B600B49EA0 /* icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon16.png; sourceTree = "<group>"; };
+		69AF00F01A7E53B600B49EA0 /* icon16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon16@2x.png"; sourceTree = "<group>"; };
+		69AF00F11A7E53B600B49EA0 /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon32.png; sourceTree = "<group>"; };
+		69AF00F21A7E53B600B49EA0 /* icon32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon32@2x.png"; sourceTree = "<group>"; };
+		69AF00F31A7E53B600B49EA0 /* icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon128.png; sourceTree = "<group>"; };
+		69AF00F41A7E53B600B49EA0 /* icon128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon128@2x.png"; sourceTree = "<group>"; };
+		69AF00FC1A7E570800B49EA0 /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		69AF00FD1A7E570800B49EA0 /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+		69AF00FF1A7E5B4D00B49EA0 /* ipadair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipadair.png; sourceTree = "<group>"; };
+		69AF01011A7E5EF000B49EA0 /* iphoneic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneic.png; sourceTree = "<group>"; };
+		69AF01031A7E5F1200B49EA0 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone.png; sourceTree = "<group>"; };
+		69CC1F6D1A7BD2B90054097D /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		69CC1F6E1A7BD2B90054097D /* PTChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTChannel.h; sourceTree = "<group>"; };
+		69CC1F6F1A7BD2B90054097D /* PTChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTChannel.m; sourceTree = "<group>"; };
+		69CC1F701A7BD2B90054097D /* PTPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPrivate.h; sourceTree = "<group>"; };
+		69CC1F711A7BD2B90054097D /* PTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProtocol.h; sourceTree = "<group>"; };
+		69CC1F721A7BD2B90054097D /* PTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProtocol.m; sourceTree = "<group>"; };
+		69CC1F731A7BD2B90054097D /* PTUSBHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTUSBHub.h; sourceTree = "<group>"; };
+		69CC1F741A7BD2B90054097D /* PTUSBHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTUSBHub.m; sourceTree = "<group>"; };
+		69CC20191A7BD3100054097D /* PTExampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTExampleProtocol.h; sourceTree = "<group>"; };
+		69CC201E1A7BD3650054097D /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		69CC20201A7BD36A0054097D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		69CC20211A7BD36A0054097D /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		69CC20241A7BD37E0054097D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		69CC20261A7BDE040054097D /* USBMIDIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBMIDIController.h; sourceTree = "<group>"; };
+		69CC20271A7BDE040054097D /* USBMIDIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBMIDIController.m; sourceTree = "<group>"; };
+		69CC20291A7BECCA0054097D /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		69CC202A1A7BECCA0054097D /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
+		DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MIDI LE USB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DD4F7C0C13C30F9F00825C6E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DD4F7C0D13C30F9F00825C6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Popup-Info.plist"; path = "Popup/Popup-Info.plist"; sourceTree = "<group>"; };
+		DD4F7C1413C30F9F00825C6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popup-Prefix.pch"; sourceTree = "<group>"; };
+		DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
+		DD4F7C1E13C30F9F00825C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DD4F7C3613C317A500825C6E /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		DD4F7C3713C317A500825C6E /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		DD4F7C3A13C3180800825C6E /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		DD4F7C3B13C3180800825C6E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		DD4F7C3D13C318D600825C6E /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		DD4F7C3E13C318D600825C6E /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		DD4F7C4013C31B4A00825C6E /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Panel.xib; path = Popup/Panel.xib; sourceTree = "<group>"; };
+		DD4F7C4213C31BD200825C6E /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		DD4F7C4313C31BD200825C6E /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		DD4F7C4513C3208500825C6E /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		DD4F7C4613C3208500825C6E /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		DD4F7C4913C322FA00825C6E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Status.png; path = Popup/Status.png; sourceTree = "<group>"; };
+		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = Popup/StatusHighlighted.png; sourceTree = "<group>"; };
+		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "Popup/Status@2x.png"; sourceTree = "<group>"; };
+		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "Popup/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4F7C0113C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697F449D1C63D1B400711BCD /* CoreAudioKit.framework in Frameworks */,
+				69CC20251A7BD37E0054097D /* QuartzCore.framework in Frameworks */,
+				6957F1671A7E347B00FB17CA /* Sparkle.framework in Frameworks */,
+				69CC20221A7BD36A0054097D /* AudioToolbox.framework in Frameworks */,
+				69CC20231A7BD36A0054097D /* AudioUnit.framework in Frameworks */,
+				69CC201F1A7BD3650054097D /* CoreMIDI.framework in Frameworks */,
+				DD4F7C0913C30F9F00825C6E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69AF00FB1A7E53BA00B49EA0 /* Appicons */ = {
+			isa = PBXGroup;
+			children = (
+				69AF00EF1A7E53B600B49EA0 /* icon16.png */,
+				69AF00F01A7E53B600B49EA0 /* icon16@2x.png */,
+				69AF00F11A7E53B600B49EA0 /* icon32.png */,
+				69AF00F21A7E53B600B49EA0 /* icon32@2x.png */,
+				69AF00F31A7E53B600B49EA0 /* icon128.png */,
+				69AF00F41A7E53B600B49EA0 /* icon128@2x.png */,
+			);
+			name = Appicons;
+			sourceTree = "<group>";
+		};
+		69CC1F6C1A7BD2B90054097D /* peertalk */ = {
+			isa = PBXGroup;
+			children = (
+				69CC1F6D1A7BD2B90054097D /* prefix.pch */,
+				69CC1F6E1A7BD2B90054097D /* PTChannel.h */,
+				69CC1F6F1A7BD2B90054097D /* PTChannel.m */,
+				69CC1F701A7BD2B90054097D /* PTPrivate.h */,
+				69CC1F711A7BD2B90054097D /* PTProtocol.h */,
+				69CC1F721A7BD2B90054097D /* PTProtocol.m */,
+				69CC1F731A7BD2B90054097D /* PTUSBHub.h */,
+				69CC1F741A7BD2B90054097D /* PTUSBHub.m */,
+			);
+			path = peertalk;
+			sourceTree = "<group>";
+		};
+		DD4F7BF913C30F9F00825C6E = {
+			isa = PBXGroup;
+			children = (
+				69AF00EB1A7E529E00B49EA0 /* Images.xcassets */,
+				DD4F7C0E13C30F9F00825C6E /* Sources */,
+				DD4F7C2813C3123E00825C6E /* User Interface */,
+				DD4F7C0713C30F9F00825C6E /* Frameworks */,
+				DD4F7C0513C30F9F00825C6E /* Products */,
+				DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4F7C0513C30F9F00825C6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4F7C0713C30F9F00825C6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697F449C1C63D1B400711BCD /* CoreAudioKit.framework */,
+				6957F1661A7E347B00FB17CA /* Sparkle.framework */,
+				69CC20241A7BD37E0054097D /* QuartzCore.framework */,
+				69CC20201A7BD36A0054097D /* AudioToolbox.framework */,
+				69CC20211A7BD36A0054097D /* AudioUnit.framework */,
+				69CC201E1A7BD3650054097D /* CoreMIDI.framework */,
+				DD4F7C0B13C30F9F00825C6E /* AppKit.framework */,
+				DD4F7C0C13C30F9F00825C6E /* CoreData.framework */,
+				DD4F7C0D13C30F9F00825C6E /* Foundation.framework */,
+				DD4F7C0813C30F9F00825C6E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD4F7C0E13C30F9F00825C6E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C2613C311DF00825C6E /* Controllers */,
+				DD4F7C3913C317EC00825C6E /* Views */,
+				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
+			);
+			name = Sources;
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		DD4F7C0F13C30F9F00825C6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69CC1F6C1A7BD2B90054097D /* peertalk */,
+				DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */,
+				69AF00E91A7E4D6100B49EA0 /* dsa_pub.pem */,
+				DD4F7C1413C30F9F00825C6E /* main.m */,
+				69AF00FC1A7E570800B49EA0 /* LaunchAtLoginController.h */,
+				69AF00FD1A7E570800B49EA0 /* LaunchAtLoginController.m */,
+				69CC20291A7BECCA0054097D /* NSAttributedString+Hyperlink.h */,
+				69CC202A1A7BECCA0054097D /* NSAttributedString+Hyperlink.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD4F7C2613C311DF00825C6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */,
+				DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */,
+				DD4F7C3613C317A500825C6E /* MenubarController.h */,
+				DD4F7C3713C317A500825C6E /* MenubarController.m */,
+				69CC20261A7BDE040054097D /* USBMIDIController.h */,
+				69CC20271A7BDE040054097D /* USBMIDIController.m */,
+				69AF00D61A7E371400B49EA0 /* PreferenceController.h */,
+				69AF00D71A7E371400B49EA0 /* PreferenceController.m */,
+				6961291F1C67516900CA5E57 /* AudioDeviceController.h */,
+				696129201C67516900CA5E57 /* AudioDeviceController.m */,
+				DD4F7C3D13C318D600825C6E /* PanelController.h */,
+				DD4F7C3E13C318D600825C6E /* PanelController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DD4F7C2813C3123E00825C6E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4813C322D800825C6E /* Graphics */,
+				DD4F7C2913C3124300825C6E /* XIBs */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		DD4F7C2913C3124300825C6E /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */,
+				DD4F7C4013C31B4A00825C6E /* Panel.xib */,
+				69AF00D11A7E36AD00B49EA0 /* Preferences.xib */,
+				697F449E1C63D65600711BCD /* Devices.xib */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		DD4F7C3913C317EC00825C6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F7C4213C31BD200825C6E /* Panel.h */,
+				DD4F7C4313C31BD200825C6E /* Panel.m */,
+				DD4F7C3A13C3180800825C6E /* StatusItemView.h */,
+				DD4F7C3B13C3180800825C6E /* StatusItemView.m */,
+				DD4F7C4513C3208500825C6E /* BackgroundView.h */,
+				DD4F7C4613C3208500825C6E /* BackgroundView.m */,
+				69CC20191A7BD3100054097D /* PTExampleProtocol.h */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD4F7C4813C322D800825C6E /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				69AF00FB1A7E53BA00B49EA0 /* Appicons */,
+				DD4F7C4913C322FA00825C6E /* Status.png */,
+				69AF01011A7E5EF000B49EA0 /* iphoneic.png */,
+				69AF01031A7E5F1200B49EA0 /* iphone.png */,
+				69AF00FF1A7E5B4D00B49EA0 /* ipadair.png */,
+				69AF00DB1A7E395E00B49EA0 /* settings.png */,
+				69AF00DD1A7E3BDD00B49EA0 /* setting@2x.png */,
+				DDF4EFAB16C80A510044D141 /* Status@2x.png */,
+				DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */,
+				DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD4F7C0313C30F9F00825C6E /* MIDI LE USB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "MIDI LE USB" */;
+			buildPhases = (
+				DD4F7C0013C30F9F00825C6E /* Sources */,
+				DD4F7C0113C30F9F00825C6E /* Frameworks */,
+				DD4F7C0213C30F9F00825C6E /* Resources */,
+				69AF00CF1A7E35AC00B49EA0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MIDI LE USB";
+			productName = Popup;
+			productReference = DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD4F7BFB13C30F9F00825C6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					DD4F7C0313C30F9F00825C6E = {
+						DevelopmentTeam = VEESE9857L;
+					};
+				};
+			};
+			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD4F7BF913C30F9F00825C6E;
+			productRefGroup = DD4F7C0513C30F9F00825C6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4F7C0313C30F9F00825C6E /* MIDI LE USB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4F7C0213C30F9F00825C6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69AF00DC1A7E395E00B49EA0 /* settings.png in Resources */,
+				69AF00F81A7E53B600B49EA0 /* icon32@2x.png in Resources */,
+				69AF00F91A7E53B600B49EA0 /* icon128.png in Resources */,
+				69AF00F51A7E53B600B49EA0 /* icon16.png in Resources */,
+				69AF00D21A7E36AD00B49EA0 /* Preferences.xib in Resources */,
+				697F449F1C63D65600711BCD /* Devices.xib in Resources */,
+				69AF00FA1A7E53B600B49EA0 /* icon128@2x.png in Resources */,
+				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
+				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
+				69AF00EC1A7E529E00B49EA0 /* Images.xcassets in Resources */,
+				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
+				69AF00EA1A7E4D6100B49EA0 /* dsa_pub.pem in Resources */,
+				DD4F7C4C13C322FA00825C6E /* StatusHighlighted.png in Resources */,
+				69AF01041A7E5F1200B49EA0 /* iphone.png in Resources */,
+				69AF00F71A7E53B600B49EA0 /* icon32.png in Resources */,
+				DDF4EFAC16C80A510044D141 /* Status@2x.png in Resources */,
+				69AF00F61A7E53B600B49EA0 /* icon16@2x.png in Resources */,
+				DDF4EFAE16C80AD30044D141 /* StatusHighlighted@2x.png in Resources */,
+				69AF01001A7E5B4D00B49EA0 /* ipadair.png in Resources */,
+				69AF01021A7E5EF000B49EA0 /* iphoneic.png in Resources */,
+				69AF00DE1A7E3BDD00B49EA0 /* setting@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4F7C0013C30F9F00825C6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69AF00FE1A7E570800B49EA0 /* LaunchAtLoginController.m in Sources */,
+				DD4F7C1513C30F9F00825C6E /* main.m in Sources */,
+				DD4F7C1C13C30F9F00825C6E /* ApplicationDelegate.m in Sources */,
+				69CC20281A7BDE040054097D /* USBMIDIController.m in Sources */,
+				696129211C67516900CA5E57 /* AudioDeviceController.m in Sources */,
+				DD4F7C3813C317A500825C6E /* MenubarController.m in Sources */,
+				69CC1F751A7BD2B90054097D /* PTChannel.m in Sources */,
+				69AF00D91A7E371400B49EA0 /* PreferenceController.m in Sources */,
+				DD4F7C3C13C3180800825C6E /* StatusItemView.m in Sources */,
+				69CC202B1A7BECCA0054097D /* NSAttributedString+Hyperlink.m in Sources */,
+				69CC1F761A7BD2B90054097D /* PTProtocol.m in Sources */,
+				DD4F7C3F13C318D600825C6E /* PanelController.m in Sources */,
+				DD4F7C4413C31BD200825C6E /* Panel.m in Sources */,
+				69CC1F771A7BD2B90054097D /* PTUSBHub.m in Sources */,
+				DD4F7C4713C3208500825C6E /* BackgroundView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD4F7C1D13C30F9F00825C6E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4F7C1E13C30F9F00825C6E /* en */,
+			);
+			name = MainMenu.xib;
+			path = Popup;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD4F7C2013C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DD4F7C2113C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DD4F7C2313C30F9F00825C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
+				INFOPLIST_FILE = "Popup/Popup-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"-Wl",
+					"-rpath",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD4F7C2413C30F9F00825C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
+				INFOPLIST_FILE = "Popup/Popup-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"-Wl",
+					"-rpath",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2013C30F9F00825C6E /* Debug */,
+				DD4F7C2113C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "MIDI LE USB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4F7C2313C30F9F00825C6E /* Debug */,
+				DD4F7C2413C30F9F00825C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD4F7BFB13C30F9F00825C6E /* Project object */;
+}
