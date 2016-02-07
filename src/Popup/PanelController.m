@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSTimer *deviceUpdateTimer;
 @property (nonatomic, retain) PreferenceController *controllerWindow;
 @property (nonatomic, retain) AudioDeviceController *audioController;
-
+@property (nonatomic, strong) CABTLEMIDIWindowController *blueDeviceView;
 
 @end
 
@@ -44,6 +44,7 @@
 @synthesize deviceWindow;
 @synthesize devView;
 @synthesize audioController;
+@synthesize blueDeviceButton;
 #pragma mark -
 
 - (id)initWithDelegate:(id<PanelControllerDelegate>)delegate
@@ -74,6 +75,7 @@
     NSPanel *panel = (id)[self window];
     if (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_10_Max) {
       iosAudioButton.hidden = YES;
+      blueDeviceButton.hidden = YES;
     }
 
     [panel setAcceptsMouseMovedEvents:YES];
@@ -95,6 +97,15 @@
   }
   
   [audioController showWindow:self];
+}
+
+-(IBAction)showBluetoothDevices:(id)sender
+{
+  if (self.blueDeviceView == nil)
+  {
+    self.blueDeviceView = [CABTLEMIDIWindowController new];
+  }
+  [self.blueDeviceView showWindow:self];
 }
 
 -(IBAction)preferenceButton:(id)sender {

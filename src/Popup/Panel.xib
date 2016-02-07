@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PanelController">
             <connections>
                 <outlet property="backgroundView" destination="6" id="20"/>
+                <outlet property="blueDeviceButton" destination="ZPh-LB-LRo" id="6KW-vf-hcI"/>
                 <outlet property="deviceName" destination="42" id="56"/>
                 <outlet property="devicePing" destination="44" id="57"/>
                 <outlet property="iosAudioButton" destination="YC1-g8-VAu" id="s4P-5D-J6x"/>
@@ -142,6 +143,17 @@
                         </buttonCell>
                         <connections>
                             <action selector="preferenceButton:" target="-2" id="77"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="ZPh-LB-LRo">
+                        <rect key="frame" x="167" y="41" width="99" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Bluetooth" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tvl-pA-eu9">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showBluetoothDevices:" target="-2" id="50s-yp-kKe"/>
                         </connections>
                     </button>
                 </subviews>

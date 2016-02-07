@@ -22,7 +22,6 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     [self.deviceView addSubview:self.audioDeviceViewController.view];
-  
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 }
 
