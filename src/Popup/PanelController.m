@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSTimer *deviceUpdateTimer;
 @property (nonatomic, retain) PreferenceController *controllerWindow;
 @property (nonatomic, retain) AudioDeviceController *audioController;
-@property (nonatomic, strong) CABTLEMIDIWindowController *blueDeviceView;
+@property (nonatomic, strong) NSWindowController *blueDeviceView;
 
 @end
 
