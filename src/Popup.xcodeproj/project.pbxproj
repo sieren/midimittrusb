@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6957F1671A7E347B00FB17CA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; };
 		696129211C67516900CA5E57 /* AudioDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696129201C67516900CA5E57 /* AudioDeviceController.m */; };
-		697F449D1C63D1B400711BCD /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697F449C1C63D1B400711BCD /* CoreAudioKit.framework */; };
+		697F449D1C63D1B400711BCD /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697F449C1C63D1B400711BCD /* CoreAudioKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		697F449F1C63D65600711BCD /* Devices.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697F449E1C63D65600711BCD /* Devices.xib */; };
 		69AF00D01A7E35BF00B49EA0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69AF00D21A7E36AD00B49EA0 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00D11A7E36AD00B49EA0 /* Preferences.xib */; };
