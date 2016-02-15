@@ -42,7 +42,6 @@ id thisClass;
 @property (nonatomic, strong)  NSMutableDictionary *remoteDeviceInfo_;
 
 
-- (void)presentMessage:(NSString*)message isStatus:(BOOL)isStatus;
 - (void)startListeningForDevices;
 - (void)didDisconnectFromDevice:(NSNumber*)deviceID;
 - (void)disconnectFromCurrentChannel;
@@ -112,9 +111,6 @@ id thisClass;
     
     // Start trying to connect to local IPv4 port (defined in PTExampleProtocol.h)
     [self enqueueConnectToLocalIPv4Port];
-    
-    // Put a little message in the UI
-    [self presentMessage:@"Ready for action — connecting at will." isStatus:YES];
     
     // Start pinging
     [self ping];
@@ -228,7 +224,6 @@ id thisClass;
     if (type == PTExampleFrameTypeDeviceInfo) {
         NSDictionary *deviceInfo = [NSDictionary dictionaryWithContentsOfDispatchData:payload.dispatchData];
         self.remoteDeviceInfo_ = [deviceInfo mutableCopy];
-        [self presentMessage:[NSString stringWithFormat:@"Connected to %@", deviceInfo.description] isStatus:YES];
         [self sendNotificationWithTitle:@"Connected" andMessage:[NSString stringWithFormat:@"Connected to %@: %@", [remoteDeviceInfo_ objectForKey:@"localizedModel"], [remoteDeviceInfo_ objectForKey:@"name"]]];
     } else if (type == PTExampleFrameTypeTextMessage) {
         PTExampleTextFrame *textFrame = (PTExampleTextFrame*)payload.data;
@@ -278,7 +273,6 @@ id thisClass;
     }
     
     if (connectedChannel_ == channel) {
-        [self presentMessage:[NSString stringWithFormat:@"Disconnected from %@", channel.userInfo] isStatus:YES];
         
         self.connectedChannel = nil;
         self.remoteDeviceInfo_ = nil;
