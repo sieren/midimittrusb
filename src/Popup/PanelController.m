@@ -92,10 +92,7 @@
 
 -(IBAction)iosAudioDeviceBrowser:(id)sender
 {
-  if (self.audioController == nil) {
-    self.audioController = [[AudioDeviceController alloc] init];
-  }
-  
+  self.audioController = [[AudioDeviceController alloc] init];
   [audioController showWindow:self];
 }
 
