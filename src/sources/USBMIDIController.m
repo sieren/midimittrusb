@@ -15,6 +15,7 @@
 // #import "MIKMIDI.h"
 
 id thisUSBCtrlClass;
+void ReadProc(const MIDIPacketList *packetList, void *readProcRefCon, void *srcConnRefCon);
 @interface USBMIDIController() {
     
     // If the remote connection is over USB transport...
@@ -182,7 +183,7 @@ id thisUSBCtrlClass;
             [self performSelector:@selector(ping) withObject:nil afterDelay:1.0];
             [pingInfo setObject:[NSDate date] forKey:@"date sent"];
             if (error) {
-                [pings_ removeObjectForKey:tag];
+                [self->pings_ removeObjectForKey:tag];
             }
         }];
     } else {
@@ -286,30 +287,30 @@ id thisUSBCtrlClass;
 - (void)startListeningForDevices {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     
-    [nc addObserverForName:PTUSBDeviceDidAttachNotification object:PTUSBHub.sharedHub queue:nil usingBlock:^(NSNotification *note) {
+    [nc addObserverForName:(NSString*)PTUSBDeviceDidAttachNotification object:PTUSBHub.sharedHub queue:nil usingBlock:^(NSNotification *note) {
         NSNumber *deviceID = [note.userInfo objectForKey:@"DeviceID"];
         //NSLog(@"PTUSBDeviceDidAttachNotification: %@", note.userInfo);
         NSLog(@"PTUSBDeviceDidAttachNotification: %@", deviceID);
         
-        dispatch_async(notConnectedQueue_, ^{
-            if (!connectingToDeviceID_ || ![deviceID isEqualToNumber:connectingToDeviceID_]) {
+        dispatch_async(self->notConnectedQueue_, ^{
+            if (!self->connectingToDeviceID_ || ![deviceID isEqualToNumber:self->connectingToDeviceID_]) {
                 [self disconnectFromCurrentChannel];
-                connectingToDeviceID_ = deviceID;
-                connectedDeviceProperties_ = [note.userInfo objectForKey:@"Properties"];
+                self->connectingToDeviceID_ = deviceID;
+                self->connectedDeviceProperties_ = [note.userInfo objectForKey:@"Properties"];
                 [self enqueueConnectToUSBDevice];
             }
         });
     }];
     
-    [nc addObserverForName:PTUSBDeviceDidDetachNotification object:PTUSBHub.sharedHub queue:nil usingBlock:^(NSNotification *note) {
+    [nc addObserverForName:(NSString*)PTUSBDeviceDidDetachNotification object:PTUSBHub.sharedHub queue:nil usingBlock:^(NSNotification *note) {
         NSNumber *deviceID = [note.userInfo objectForKey:@"DeviceID"];
         NSLog(@"PTUSBDeviceDidDetachNotification: %@", deviceID);
         
-        if ([connectingToDeviceID_ isEqualToNumber:deviceID]) {
-            connectedDeviceProperties_ = nil;
-            connectingToDeviceID_ = nil;
-            if (connectedChannel_) {
-                [connectedChannel_ close];
+        if ([self->connectingToDeviceID_ isEqualToNumber:deviceID]) {
+            self->connectedDeviceProperties_ = nil;
+            self->connectingToDeviceID_ = nil;
+            if (self->connectedChannel_) {
+                [self->connectedChannel_ close];
             }
         }
     }];
@@ -387,11 +388,11 @@ id thisUSBCtrlClass;
             } else {
                 NSLog(@"Failed to connect to device #%@: %@", channel.userInfo, error);
             }
-            if (channel.userInfo == connectingToDeviceID_) {
+            if (channel.userInfo == self->connectingToDeviceID_) {
                 [self performSelector:@selector(enqueueConnectToUSBDevice) withObject:nil afterDelay:PTAppReconnectDelay];
             }
         } else {
-            connectedDeviceID_ = connectingToDeviceID_;
+            self->connectedDeviceID_ = self->connectingToDeviceID_;
             self.connectedChannel = channel;
         }
     }];

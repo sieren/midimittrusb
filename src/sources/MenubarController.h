@@ -16,9 +16,4 @@
 @property (nonatomic, strong, readonly) NSStatusItem *statusItem;
 @property (nonatomic, strong, readonly) StatusItemView *statusItemView;
 
-
-
-- (IBAction)sendSysex:(id)sender;
-- (IBAction)sendMessage:(id)sender;
-
 @end
