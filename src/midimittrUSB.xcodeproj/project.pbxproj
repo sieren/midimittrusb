@@ -29,9 +29,9 @@
 		69AF01001A7E5B4D00B49EA0 /* ipadair.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF00FF1A7E5B4D00B49EA0 /* ipadair.png */; };
 		69AF01021A7E5EF000B49EA0 /* iphoneic.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF01011A7E5EF000B49EA0 /* iphoneic.png */; };
 		69AF01041A7E5F1200B49EA0 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 69AF01031A7E5F1200B49EA0 /* iphone.png */; };
-		69CC1F751A7BD2B90054097D /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F6F1A7BD2B90054097D /* PTChannel.m */; };
-		69CC1F761A7BD2B90054097D /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F721A7BD2B90054097D /* PTProtocol.m */; };
-		69CC1F771A7BD2B90054097D /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F741A7BD2B90054097D /* PTUSBHub.m */; };
+		69CC1F751A7BD2B90054097D /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F6F1A7BD2B90054097D /* PTChannel.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		69CC1F761A7BD2B90054097D /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F721A7BD2B90054097D /* PTProtocol.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		69CC1F771A7BD2B90054097D /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CC1F741A7BD2B90054097D /* PTUSBHub.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		69CC201F1A7BD3650054097D /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC201E1A7BD3650054097D /* CoreMIDI.framework */; };
 		69CC20221A7BD36A0054097D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC20201A7BD36A0054097D /* AudioToolbox.framework */; };
 		69CC20231A7BD36A0054097D /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CC20211A7BD36A0054097D /* AudioUnit.framework */; };
