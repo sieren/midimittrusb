@@ -13,6 +13,7 @@
 // - Lightweight API on top of libdispatch (aka GCD) -- close to the metal.
 //
 #include <dispatch/dispatch.h>
+#import <Foundation/Foundation.h>
 
 // Special frame tag that signifies "no tag". Your implementation should never
 // create a reply for a frame with this tag.
@@ -22,7 +23,7 @@ static const uint32_t PTFrameNoTag = 0;
 static const uint32_t PTFrameTypeEndOfStream = 0;
 
 // NSError domain
-FOUNDATION_EXPORT NSString const *PTProtocolErrorDomain;
+FOUNDATION_EXPORT NSString * const PTProtocolErrorDomain;
 
 
 @interface PTProtocol : NSObject

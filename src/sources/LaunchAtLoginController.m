@@ -26,6 +26,7 @@
 #import "LaunchAtLoginController.h"
 
 static NSString *const StartAtLoginKey = @"launchAtLogin";
+void sharedFileListDidChange(LSSharedFileListRef inList, void *context);
 
 @interface LaunchAtLoginController ()
 @property(assign) LSSharedFileListRef loginItems;

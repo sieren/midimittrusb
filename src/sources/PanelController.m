@@ -45,6 +45,7 @@
 @synthesize devView;
 @synthesize audioController;
 @synthesize blueDeviceButton;
+@synthesize quitButton;
 #pragma mark -
 
 - (id)initWithDelegate:(id<PanelControllerDelegate>)delegate
@@ -175,7 +176,7 @@
         
     if (list != nil){
     if (list->length > 0)
-    NSLog(@"LAST PACK NAME: %x", list->data);
+      NSLog(@"LAST PACK NAME: %s", list->data);
     }
     }
     else {
