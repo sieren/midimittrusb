@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6957F1671A7E347B00FB17CA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; };
 		696129211C67516900CA5E57 /* AudioDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696129201C67516900CA5E57 /* AudioDeviceController.m */; };
+		696D75292159488A002C3C57 /* midimittrUSB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 696D752821594889002C3C57 /* midimittrUSB-Info.plist */; };
 		697F449D1C63D1B400711BCD /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697F449C1C63D1B400711BCD /* CoreAudioKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		697F449F1C63D65600711BCD /* Devices.xib in Resources */ = {isa = PBXBuildFile; fileRef = 697F449E1C63D65600711BCD /* Devices.xib */; };
 		69AF00D01A7E35BF00B49EA0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6957F1661A7E347B00FB17CA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -70,9 +71,11 @@
 		6957F1661A7E347B00FB17CA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		6961291F1C67516900CA5E57 /* AudioDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceController.h; sourceTree = "<group>"; };
 		696129201C67516900CA5E57 /* AudioDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDeviceController.m; sourceTree = "<group>"; };
+		696D752821594889002C3C57 /* midimittrUSB-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "midimittrUSB-Info.plist"; path = "sources/midimittrUSB-Info.plist"; sourceTree = "<group>"; };
+		696D752B215948EC002C3C57 /* midimittrUSB-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "midimittrUSB-Prefix.pch"; sourceTree = "<group>"; };
 		697F449C1C63D1B400711BCD /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
-		697F449E1C63D65600711BCD /* Devices.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Devices.xib; path = Popup/Devices.xib; sourceTree = "<group>"; };
-		69AF00D11A7E36AD00B49EA0 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = Popup/Preferences.xib; sourceTree = "<group>"; };
+		697F449E1C63D65600711BCD /* Devices.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Devices.xib; path = Sources/Devices.xib; sourceTree = "<group>"; };
+		69AF00D11A7E36AD00B49EA0 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = Sources/Preferences.xib; sourceTree = "<group>"; };
 		69AF00D61A7E371400B49EA0 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		69AF00D71A7E371400B49EA0 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		69AF00DB1A7E395E00B49EA0 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -107,14 +110,12 @@
 		69CC20271A7BDE040054097D /* USBMIDIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBMIDIController.m; sourceTree = "<group>"; };
 		69CC20291A7BECCA0054097D /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		69CC202A1A7BECCA0054097D /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
-		DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MIDI LE USB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4F7C0413C30F9F00825C6E /* midimittrUSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = midimittrUSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F7C0813C30F9F00825C6E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DD4F7C0B13C30F9F00825C6E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		DD4F7C0C13C30F9F00825C6E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DD4F7C0D13C30F9F00825C6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Popup-Info.plist"; path = "Popup/Popup-Info.plist"; sourceTree = "<group>"; };
 		DD4F7C1413C30F9F00825C6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popup-Prefix.pch"; sourceTree = "<group>"; };
 		DD4F7C1A13C30F9F00825C6E /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
 		DD4F7C1B13C30F9F00825C6E /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
 		DD4F7C1E13C30F9F00825C6E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -124,15 +125,15 @@
 		DD4F7C3B13C3180800825C6E /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 		DD4F7C3D13C318D600825C6E /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
 		DD4F7C3E13C318D600825C6E /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
-		DD4F7C4013C31B4A00825C6E /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Panel.xib; path = Popup/Panel.xib; sourceTree = "<group>"; };
+		DD4F7C4013C31B4A00825C6E /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Panel.xib; path = Sources/Panel.xib; sourceTree = "<group>"; };
 		DD4F7C4213C31BD200825C6E /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
 		DD4F7C4313C31BD200825C6E /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
 		DD4F7C4513C3208500825C6E /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		DD4F7C4613C3208500825C6E /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
-		DD4F7C4913C322FA00825C6E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Status.png; path = Popup/Status.png; sourceTree = "<group>"; };
-		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = Popup/StatusHighlighted.png; sourceTree = "<group>"; };
-		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "Popup/Status@2x.png"; sourceTree = "<group>"; };
-		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "Popup/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
+		DD4F7C4913C322FA00825C6E /* Status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Status.png; path = Sources/Status.png; sourceTree = "<group>"; };
+		DD4F7C4A13C322FA00825C6E /* StatusHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusHighlighted.png; path = Sources/StatusHighlighted.png; sourceTree = "<group>"; };
+		DDF4EFAB16C80A510044D141 /* Status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status@2x.png"; path = "Sources/Status@2x.png"; sourceTree = "<group>"; };
+		DDF4EFAD16C80AD30044D141 /* StatusHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "StatusHighlighted@2x.png"; path = "Sources/StatusHighlighted@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,14 +190,14 @@
 				DD4F7C2813C3123E00825C6E /* User Interface */,
 				DD4F7C0713C30F9F00825C6E /* Frameworks */,
 				DD4F7C0513C30F9F00825C6E /* Products */,
-				DD4F7C1013C30F9F00825C6E /* Popup-Info.plist */,
+				696D752821594889002C3C57 /* midimittrUSB-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		DD4F7C0513C30F9F00825C6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */,
+				DD4F7C0413C30F9F00825C6E /* midimittrUSB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,15 +227,15 @@
 				DD4F7C0F13C30F9F00825C6E /* Supporting Files */,
 			);
 			name = Sources;
-			path = Popup;
+			path = sources;
 			sourceTree = "<group>";
 		};
 		DD4F7C0F13C30F9F00825C6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				69CC1F6C1A7BD2B90054097D /* peertalk */,
-				DD4F7C1613C30F9F00825C6E /* Popup-Prefix.pch */,
 				69AF00E91A7E4D6100B49EA0 /* dsa_pub.pem */,
+				696D752B215948EC002C3C57 /* midimittrUSB-Prefix.pch */,
 				DD4F7C1413C30F9F00825C6E /* main.m */,
 				69AF00FC1A7E570800B49EA0 /* LaunchAtLoginController.h */,
 				69AF00FD1A7E570800B49EA0 /* LaunchAtLoginController.m */,
@@ -317,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD4F7C0313C30F9F00825C6E /* MIDI LE USB */ = {
+		DD4F7C0313C30F9F00825C6E /* midimittrUSB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "MIDI LE USB" */;
+			buildConfigurationList = DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "midimittrUSB" */;
 			buildPhases = (
 				DD4F7C0013C30F9F00825C6E /* Sources */,
 				DD4F7C0113C30F9F00825C6E /* Frameworks */,
@@ -330,9 +331,9 @@
 			);
 			dependencies = (
 			);
-			name = "MIDI LE USB";
-			productName = Popup;
-			productReference = DD4F7C0413C30F9F00825C6E /* MIDI LE USB.app */;
+			name = midimittrUSB;
+			productName = midimittrUSB;
+			productReference = DD4F7C0413C30F9F00825C6E /* midimittrUSB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -341,14 +342,15 @@
 		DD4F7BFB13C30F9F00825C6E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					DD4F7C0313C30F9F00825C6E = {
 						DevelopmentTeam = VEESE9857L;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */;
+			buildConfigurationList = DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "midimittrUSB" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -360,7 +362,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD4F7C0313C30F9F00825C6E /* MIDI LE USB */,
+				DD4F7C0313C30F9F00825C6E /* midimittrUSB */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +381,7 @@
 				69AF00FA1A7E53B600B49EA0 /* icon128@2x.png in Resources */,
 				DD4F7C1F13C30F9F00825C6E /* MainMenu.xib in Resources */,
 				DD4F7C4113C31B4A00825C6E /* Panel.xib in Resources */,
+				696D75292159488A002C3C57 /* midimittrUSB-Info.plist in Resources */,
 				69AF00EC1A7E529E00B49EA0 /* Images.xcassets in Resources */,
 				DD4F7C4B13C322FA00825C6E /* Status.png in Resources */,
 				69AF00EA1A7E4D6100B49EA0 /* dsa_pub.pem in Resources */,
@@ -428,7 +431,7 @@
 				DD4F7C1E13C30F9F00825C6E /* en */,
 			);
 			name = MainMenu.xib;
-			path = Popup;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,18 +441,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -474,11 +489,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -486,6 +511,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -504,22 +530,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VEESE9857L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
-				INFOPLIST_FILE = "Popup/Popup-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/midimittrUSB-Prefix.pch";
+				INFOPLIST_FILE = "Sources/midimittrUSB-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-Wl",
 					"-rpath",
 					"@loader_path/../Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattfrick.midileusb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -529,22 +559,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Popup/Popup-Prefix.pch";
-				INFOPLIST_FILE = "Popup/Popup-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/midimittrUSB-Prefix.pch";
+				INFOPLIST_FILE = "Sources/midimittrUSB-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"-Wl",
 					"-rpath",
 					"@loader_path/../Frameworks",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattfrick.midileusb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -552,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "Popup" */ = {
+		DD4F7BFE13C30F9F00825C6E /* Build configuration list for PBXProject "midimittrUSB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD4F7C2013C30F9F00825C6E /* Debug */,
@@ -561,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "MIDI LE USB" */ = {
+		DD4F7C2213C30F9F00825C6E /* Build configuration list for PBXNativeTarget "midimittrUSB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD4F7C2313C30F9F00825C6E /* Debug */,

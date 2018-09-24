@@ -14,7 +14,7 @@
 #include <mach/mach_time.h>
 // #import "MIKMIDI.h"
 
-id thisClass;
+id thisUSBCtrlClass;
 @interface USBMIDIController() {
     
     // If the remote connection is over USB transport...
@@ -115,7 +115,7 @@ id thisClass;
     // Start pinging
     [self ping];
     
-    thisClass = self;
+    thisUSBCtrlClass = self;
     
     MIDIClientCreate(CFSTR("midiLE"), NULL, NULL,
                      &theMidiClient);
@@ -438,7 +438,7 @@ void ReadProc(const MIDIPacketList *packetList, void *readProcRefCon, void *srcC
     int count = packetList->numPackets;
     for (j=0; j<count; j++) {
       //  NSLog(@"Length: %i, first byte: %x, second byte: %x", packet->length, packet->data[0],packet->data[1]);
-        [thisClass sendDataToUSB:packet->data size:packet->length];
+        [thisUSBCtrlClass sendDataToUSB:packet->data size:packet->length];
         packet = MIDIPacketNext(packet);
     }
 
