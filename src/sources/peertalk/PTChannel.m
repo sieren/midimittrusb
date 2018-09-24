@@ -202,19 +202,19 @@ static const uint8_t kUserInfoKey;
     if (!error) {
       [self startReadingFromConnectedChannel:dispatchChannel error:&error];
     } else {
-      connState_ = kConnStateNone;
+        self->connState_ = kConnStateNone;
     }
     if (callback) callback(error);
   } onEnd:^(NSError *error) {
-    if (delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
-      [delegate_ ioFrameChannel:self didEndWithError:error];
+      if (self->delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
+          [self->delegate_ ioFrameChannel:self didEndWithError:error];
     }
-    endError_ = nil;
+      self->endError_ = nil;
   }];
 }
 
 
-- (void)connectToPort:(in_port_t)port IPv4Address:(in_addr_t)ipv4Address callback:(void(^)(NSError *error, PTAddress *address))callback {
+- (void)connectToPort:(in_port_t)port IPv4Address:(in_addr_t)address callback:(void(^)(NSError *error, PTAddress *address))callback {
   assert(protocol_ != NULL);
   if (connState_ != kConnStateNone) {
     if (callback) callback([NSError errorWithDomain:NSPOSIXErrorDomain code:EPERM userInfo:nil], nil);
@@ -242,7 +242,7 @@ static const uint8_t kUserInfoKey;
   addr.sin_port = htons(port);
   //addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
   //addr.sin_addr.s_addr = htonl(INADDR_ANY);
-  addr.sin_addr.s_addr = htonl(ipv4Address);
+  addr.sin_addr.s_addr = htonl(address);
   
   // prevent SIGPIPE
 	int on = 1;
@@ -267,10 +267,10 @@ static const uint8_t kUserInfoKey;
   
   dispatch_io_t dispatchChannel = dispatch_io_create(DISPATCH_IO_STREAM, fd, protocol_.queue, ^(int error) {
     close(fd);
-    if (delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
-      NSError *err = error == 0 ? endError_ : [[NSError alloc] initWithDomain:NSPOSIXErrorDomain code:error userInfo:nil];
-      [delegate_ ioFrameChannel:self didEndWithError:err];
-      endError_ = nil;
+      if (self->delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
+          NSError *err = error == 0 ? self->endError_ : [[NSError alloc] initWithDomain:NSPOSIXErrorDomain code:error userInfo:nil];
+          [self->delegate_ ioFrameChannel:self didEndWithError:err];
+          self->endError_ = nil;
     }
   });
   
@@ -282,9 +282,9 @@ static const uint8_t kUserInfoKey;
   
   // Success
   NSError *err = nil;
-  PTAddress *address = [[PTAddress alloc] initWithSockaddr:(struct sockaddr_storage*)&addr];
+  PTAddress *ptAddr = [[PTAddress alloc] initWithSockaddr:(struct sockaddr_storage*)&addr];
   [self startReadingFromConnectedChannel:dispatchChannel error:&err];
-  if (callback) callback(err, address);
+  if (callback) callback(err, ptAddr);
 }
 
 
@@ -292,11 +292,6 @@ static const uint8_t kUserInfoKey;
 
 
 - (void)listenOnPort:(in_port_t)port IPv4Address:(in_addr_t)address callback:(void(^)(NSError *error))callback {
-  if (connState_ != kConnStateNone) {
-    if (callback) callback([NSError errorWithDomain:NSPOSIXErrorDomain code:EPERM userInfo:nil]);
-    return;
-  }
-  
   assert(dispatchObj_source_ == nil);
   
   // Create socket
@@ -347,17 +342,17 @@ static const uint8_t kUserInfoKey;
   [self setDispatchSource:dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, fd, 0, protocol_.queue)];
   
   dispatch_source_set_event_handler(dispatchObj_source_, ^{
-    unsigned long nconns = dispatch_source_get_data(dispatchObj_source_);
+      unsigned long nconns = dispatch_source_get_data(self->dispatchObj_source_);
     while ([self acceptIncomingConnection:fd] && --nconns);
   });
   
   dispatch_source_set_cancel_handler(dispatchObj_source_, ^{
     // Captures *self*, effectively holding a reference to *self* until cancelled.
-    dispatchObj_source_ = nil;
+      self->dispatchObj_source_ = nil;
     close(fd);
-    if (delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
-      [delegate_ ioFrameChannel:self didEndWithError:endError_];
-      endError_ = nil;
+      if (self->delegateFlags_ & kDelegateFlagImplements_ioFrameChannel_didEndWithError) {
+          [self->delegate_ ioFrameChannel:self didEndWithError:self->endError_];
+          self->endError_ = nil;
     }
   });
   
